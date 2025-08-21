@@ -1,0 +1,144 @@
+## 15. ¿Cuáles son los tipos de datos primitivos en Java?
+
+En Java existen 8 tipos de datos primitivos, que no son objetos y almacenan valores simples:
+
+byte: Entero pequeño (8 bits).
+
+short: Entero mediano (16 bits).
+
+int: Entero común (32 bits).
+
+long: Entero grande (64 bits).
+
+float: Número decimal de precisión simple (32 bits).
+
+double: Número decimal de precisión doble (64 bits).
+
+char: Un solo carácter Unicode (16 bits).
+
+boolean: Verdadero o falso (true o false).
+
+## 16. ¿Cómo funcionan las estructuras de control de flujo en Java?
+
+### Permiten tomar decisiones y repetir instrucciones:
+
+if / else: Ejecuta bloques de código según una condición.
+
+if (x > 10) {
+    System.out.println("Mayor que 10");
+} else {
+    System.out.println("No es mayor que 10");
+}
+
+
+switch: Evalúa un valor contra varios casos.
+
+switch(dia) {
+    case 1: System.out.println("Lunes"); break;
+    case 2: System.out.println("Martes"); break;
+    default: System.out.println("Otro día");
+}
+
+
+#### Bucles:
+
+for: Repite un número definido de veces.
+
+while: Repite mientras la condición sea verdadera.
+
+do...while: Igual que while, pero se ejecuta al menos una vez.
+
+## 17. ¿Por qué es importante usar nombres significativos para variables y métodos?
+
+Mejora la legibilidad del código.
+
+Facilita el mantenimiento y el trabajo en equipo.
+
+Reduce la posibilidad de errores.
+
+### Ejemplo malo:
+
+int x, y;
+
+
+### Ejemplo bueno:
+
+int edad;
+String nombreUsuario;
+
+## 18. ¿Qué es la Programación Orientada a Objetos (POO)?
+
+Es un paradigma de programación basado en el uso de objetos, que representan entidades del mundo real. Cada objeto tiene:
+
+Atributos (estado).
+
+Métodos (comportamiento).
+
+En Java, todo gira alrededor de clases y objetos.
+
+## 19. ¿Cuáles son los cuatro pilares de la Programación Orientada a Objetos?
+
+Abstracción: Ocultar los detalles internos y mostrar solo lo esencial.
+(Ej: una clase Auto tiene acelerar(), no cómo funciona internamente).
+
+Encapsulamiento: Proteger los datos usando modificadores de acceso.
+
+Herencia: Reutilizar código permitiendo que una clase derive de otra.
+
+Polimorfismo: Un mismo método puede comportarse de distintas formas.
+
+## 20. ¿Qué es la herencia en POO y cómo se utiliza en Java?
+
+La herencia permite que una clase (hija o subclase) herede atributos y métodos de otra clase (padre o superclase).
+Se usa con la palabra clave extends.
+
+### Ejemplo:
+
+class Animal {
+    void sonido() {
+        System.out.println("Hace un sonido");
+    }
+}
+
+class Perro extends Animal {
+    void sonido() {
+        System.out.println("Ladra");
+    }
+}
+
+
+### Aquí Perro hereda de Animal y redefine el método sonido().
+
+## 21. ¿Qué son los modificadores de acceso y cuáles son los más comunes en Java?
+
+Los modificadores de acceso controlan la visibilidad de clases, atributos y métodos:
+
+public: Accesible desde cualquier parte.
+
+private: Accesible solo dentro de la misma clase.
+
+protected: Accesible desde la misma clase, paquete y subclases.
+
+(default) (sin modificador): Accesible solo dentro del mismo paquete.
+
+### Ejemplo:
+
+public class Persona {
+    private String nombre;   // Solo accesible dentro de Persona
+    protected int edad;      // Accesible en subclases
+    public void saludar() {  // Accesible desde cualquier parte
+        System.out.println("Hola");
+    }
+}
+
+## 22. ¿Qué es una variable de entorno y por qué son importantes para Java o la programación en general?
+
+Una variable de entorno es un valor definido en el sistema operativo que afecta la ejecución de programas.
+En Java se usan principalmente para:
+
+JAVA_HOME: Indica la carpeta donde está instalado Java.
+
+PATH: Permite ejecutar java y javac desde cualquier terminal.
+
+ ### Importancia:
+Sin estas variables, no podrías compilar ni ejecutar programas Java fácilmente, y en general sirven para configurar entornos de ejecución en cualquier lenguaje
